@@ -1,19 +1,14 @@
 package com.company;
 
-import java.util.Arrays;
-import java.util.Locale;
-
 public class EmployeeRoster {
-    //FIELDS
+
     private final Employee[] employeeRoster;
     private int rosterLength = 0;
 
-    // CONSTRUCTOR
     public EmployeeRoster() {
         this.employeeRoster = new Employee[10];
     }
 
-    // ADD and SEARCH methods
     public void addEmployee(
             String fullName,
             int department,
@@ -36,7 +31,6 @@ public class EmployeeRoster {
         System.out.println("Employee is not found.");
     }
 
-    // PAYROLL statistics
     public double payroll() {
         double sum = 0;
         for (int i = 0; i <= rosterLength; i++)
@@ -67,7 +61,6 @@ public class EmployeeRoster {
         return payroll()/(rosterLength+1);
     }
 
-    // PRINT methods
     public String printEmployeeList () {
         System.out.println("\nEMPLOYEE LIST");
         String message = "";

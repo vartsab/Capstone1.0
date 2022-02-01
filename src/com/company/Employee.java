@@ -1,9 +1,7 @@
 package com.company;
 
-import java.util.Locale;
-
 public class Employee {
-    //FIELDS
+
     private static int employeeCounter = 0;
 
     private final int employeeID;
@@ -11,13 +9,11 @@ public class Employee {
     int department;
     float salary;
 
-    // CONSTRUCTOR
     public Employee(
             String fullName,
             int department,
             float salary ) {
 
-        //Mistakes handlers
         if ( employeeCounter > 10 )
             throw new IllegalArgumentException("Maximum number of employee exceeded.");
         if ((department < 1) || (department > 5))
@@ -29,17 +25,14 @@ public class Employee {
         this.salary = salary;
     }
 
-    //GETTERS
     public String getFullName() { return this.fullName; }
     public int getDepartment() { return this.department; }
     public float getSalary() { return this.salary; }
     public int getEmployeeID() { return this.employeeID; }
 
-    // SETTERS
     public void setDepartment(int department) { this.department = department; }
     public void setSalary(float salary) { this.salary = salary; }
 
-    // PRINT methods
     @Override
     public String toString() {
         return String.format(
